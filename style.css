@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    /* background-image: url(pride-gradient-1_78370-282.avif); */
+    background-color: black;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 400px;
+    width: 300px;
+    perspective: 500px;
+    color: rgb(0, 0, 0);
+}
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style:preserve-3d ;
+}
+.container:hover > .card{
+    transform: rotateY(180deg);
+}
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    /* box-shadow: 0 0 5px 2px rgba(rgb(150, 54, 54), green, blue, alpha); */
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front{
+    /* background-color: blue; */
+    /* box-shadow: 5px 5px 5px rgb(47, 123, 255); */
+    background-image: url(IMG_20230221_152232.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back{
+    background-color: rgb(25, 255, 21);
+    /* box-shadow: 5px 5px 5px rgb(64, 255, 47); */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back p{
+    padding: 30px;
+    text-align: center;
+}
+.logo{
+    /* display: ; */
+    height: 50px;
+    width: 50px;
+    border:3px solid #ff4ce4;
+    border-radius: 9px;
+}
+.lg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
